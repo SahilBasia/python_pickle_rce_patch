@@ -33,6 +33,8 @@ This is serious issue and can lead Local File Inclusion and Remote Code Exectuio
 On little googling how to prevent this attack, a solution came was to use HMAC (Hash Message Authentication Code)
 
 HMAC is cryptography technique which is used to proof authenticity between messenger and sender.
-HMAC is a big topic, so i will cover it other time.It just help in maitaining the confidentiality ,integerity and authenticity of message.
+HMAC is a big topic, so i will cover it other time.It just help in maitaining the authenticity of message.
 
-I have written the patch code in patch_code foler. A same secret key is used by both client and sever which is used for encryption and decryption. To use, just add the secret key knwon to both client and server, and then no third party will be able to modify the file send by client (client.py)
+I have written the patch code in patch_code foler. A same secret key is used by both client and sever which is used for encryption and decryption. To use, just add the secret key known to both client and server, and if third party chnages the content of message, then secret key and hash send will be used to check authenticity of message.
+
+![Screenshot_2022-01-05_16-03-40](https://user-images.githubusercontent.com/53575624/148205136-2f4f84ef-ec22-4f85-9e75-c23c1a5fc064.jpg)
