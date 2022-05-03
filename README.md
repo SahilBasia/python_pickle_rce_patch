@@ -2,7 +2,7 @@
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-I came across a challenge where i had to exploit and mitigate the python pickle serialization and was given 2 python files that i have shared in unpatched_code folder.
+I came across a challenge where I had to exploit and mitigate the python pickle serialization and was given 2 python files that i have shared in unpatched_code folder.
 
 On searching on internet i came accross a wonderful article. The link is - https://versprite.com/blog/application-security/into-the-jar-jsonpickle-exploitation/
 
