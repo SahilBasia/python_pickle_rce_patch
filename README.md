@@ -2,16 +2,16 @@
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-I came across a challenge where I had to exploit and mitigate the python pickle serialization and was given 2 python files that i have shared in unpatched_code folder.
+I came across a challenge where I had to exploit and mitigate the python pickle serialization and was given 2 python files that I have shared in unpatched_code folder.
 
-On searching on internet i came accross a wonderful article. The link is - https://versprite.com/blog/application-security/into-the-jar-jsonpickle-exploitation/
+On searching on internet I came accross a wonderful article. The link is - https://versprite.com/blog/application-security/into-the-jar-jsonpickle-exploitation/
 
 I will explain in brief, how the pickle can be exploited.
 
 ## POC ##
 
-python pcikle doc contained a function __reduce__(), which helped in exploiting the serialization.
-__reduce__ function take two items, first item in a tuple that contians the argumetns and second contains the callable. Meanins using argument you can call the callable. For example - let argument be os.system (first item) and and callable be whoami (second item). This the python system.os will call the whoami command on linux .
+python pickle doc contained a function __reduce__(), which helped in exploiting the serialization.
+__reduce__ function take two arguments, first item in a tuple that contains the arguments and second contains the call-able. Meaning using argument you can call the call-able. For example - let argument be os.system (first item) and and call-able be whoami (second item). Using this the python system.os will call the whoami command on linux .
 
 ![Screenshot_2022-01-05_15-08-25](https://user-images.githubusercontent.com/53575624/148196632-e0efca31-35b0-4c5a-97e0-658f6f0d5ce7.jpg)
 
